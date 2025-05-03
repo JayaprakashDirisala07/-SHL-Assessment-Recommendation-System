@@ -1,0 +1,333 @@
+
+{
+  "assessments": [
+    {
+      "name": "Automata - Fix (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/automata-fix-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "40 minutes",
+      "testType": "Coding"
+    },
+    {
+      "name": "Core Java (Entry Level) (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/core-java-entry-level-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "35 minutes",
+      "testType": "Programming"
+    },
+    {
+      "name": "Java 8 (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/java-8-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "40 minutes",
+      "testType": "Programming"
+    },
+    {
+      "name": "Core Java (Advanced Level) (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/core-java-advanced-level-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "45 minutes",
+      "testType": "Programming"
+    },
+    {
+      "name": "Agile Software Development",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/agile-software-development/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "35 minutes",
+      "testType": "Methodology"
+    },
+    {
+      "name": "Technology Professional 8.0 Job Focused Assessment",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/technology-professional-8-0-job-focused-assessment/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "55 minutes",
+      "testType": "Comprehensive"
+    },
+    {
+      "name": "Computer Science (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/computer-science-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "30 minutes",
+      "testType": "Knowledge"
+    },
+    {
+      "name": "Entry level Sales 7.1 (International)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/entry-level-sales-7-1/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "60 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "Entry Level Sales Sift Out 7.1",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/entry-level-sales-sift-out-7-1/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "45 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "Entry Level Sales Solution",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/entry-level-sales-solution/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "55 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "Sales Representative Solution",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/sales-representative-solution/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "60 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "Sales Support Specialist Solution",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/sales-support-specialist-solution/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "50 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "Technical Sales Associate Solution",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/technical-sales-associate-solution/",
+      "remoteTestingSupport": false,
+      "adaptiveSupport": true,
+      "duration": "60 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "SVAR - Spoken English (Indian Accent) (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/svar-spoken-english-indian-accent-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "30 minutes",
+      "testType": "Language"
+    },
+    {
+      "name": "Sales & Service Phone Solution",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/sales-and-service-phone-solution/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "45 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "Sales & Service Phone Simulation",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/sales-and-service-phone-simulation/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "50 minutes",
+      "testType": "Sales"
+    },
+    {
+      "name": "English Comprehension (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/english-comprehension-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "25 minutes",
+      "testType": "Language"
+    },
+    {
+      "name": "Motivation Questionnaire MQM5",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/motivation-questionnaire-mqm5/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "60 minutes",
+      "testType": "Personality"
+    },
+    {
+      "name": "Global Skills Assessment",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/global-skills-assessment/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "60 minutes",
+      "testType": "Cross-Cultural"
+    },
+    {
+      "name": "Graduate 8.0 Job Focused Assessment",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/graduate-8-0-job-focused-assessment-4228/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "60 minutes",
+      "testType": "Comprehensive"
+    },
+    {
+      "name": "Drupal (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/drupal-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "30 minutes",
+      "testType": "CMS"
+    },
+    {
+      "name": "Search Engine Optimization (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/search-engine-optimization-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "25 minutes",
+      "testType": "Digital Marketing"
+    },
+    {
+      "name": "Administrative Professional - Short Form",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/administrative-professional-short-form/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "30 minutes",
+      "testType": "Administrative"
+    },
+    {
+      "name": "General Entry Level – Data Entry 7.0 Solution",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/general-entry-level-data-entry-7-0-solution/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "35 minutes",
+      "testType": "Data Entry"
+    },
+    {
+      "name": "Automata Selenium",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/automata-selenium/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "60 minutes",
+      "testType": "QA Testing"
+    },
+    {
+      "name": "Automata Front End",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/automata-front-end/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "60 minutes",
+      "testType": "Web Development"
+    },
+    {
+      "name": "JavaScript (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/javascript-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "45 minutes",
+      "testType": "Programming"
+    },
+    {
+      "name": "HTML/CSS (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/htmlcss-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "30 minutes",
+      "testType": "Web Development"
+    },
+    {
+      "name": "HTML5 (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/html5-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "25 minutes",
+      "testType": "Web Development"
+    },
+    {
+      "name": "CSS3 (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/css3-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "25 minutes",
+      "testType": "Web Development"
+    },
+    {
+      "name": "Selenium (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/selenium-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "45 minutes",
+      "testType": "QA Testing"
+    },
+    {
+      "name": "SQL Server (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/sql-server-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "35 minutes",
+      "testType": "Database"
+    },
+    {
+      "name": "Automata - SQL (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/automata-sql-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "50 minutes",
+      "testType": "Database"
+    },
+    {
+      "name": "Manual Testing (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/manual-testing-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "40 minutes",
+      "testType": "QA Testing"
+    },
+    {
+      "name": "Verify - Numerical Ability",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/verify-numerical-ability/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "25 minutes",
+      "testType": "Aptitude"
+    },
+    {
+      "name": "Financial Professional - Short Form",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/financial-professional-short-form/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "35 minutes",
+      "testType": "Finance"
+    },
+    {
+      "name": "Bank Administrative Assistant - Short Form",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/bank-administrative-assistant-short-form/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "30 minutes",
+      "testType": "Banking"
+    },
+    {
+      "name": "Basic Computer Literacy (Windows 10) (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/basic-computer-literacy-windows-10-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "20 minutes",
+      "testType": "IT Skills"
+    },
+    {
+      "name": "Verify - Verbal Ability - Next Generation",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/verify-verbal-ability-next-generation/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "30 minutes",
+      "testType": "Aptitude"
+    },
+    {
+      "name": "SHL Verify Interactive - Inductive Reasoning",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/shl-verify-interactive-inductive-reasoning/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "30 minutes",
+      "testType": "Aptitude"
+    },
+    {
+      "name": "Occupational Personality Questionnaire OPQ32r",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/occupational-personality-questionnaire-opq32r/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": false,
+      "duration": "45 minutes",
+      "testType": "Personality"
+    }
+  ]
+}

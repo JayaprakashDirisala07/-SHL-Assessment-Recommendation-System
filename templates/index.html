@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHL Assessment Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container">
+            <div class="header-content">
+                <h1>SHL Assessment Recommendation System</h1>
+                <p>Find the perfect assessment for your hiring needs with AI-powered recommendations</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="card">
+                <h2>Search for Assessments</h2>
+                <p>Enter a natural language query or job description to get personalized assessment recommendations</p>
+                
+                <form id="search-form">
+                    <div class="input-group">
+                        <textarea id="query" placeholder="Example: I am hiring for Java developers who can collaborate with business teams. Looking for assessments that can be completed in 40 minutes..."></textarea>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" id="search-btn">
+                            <i class="fas fa-search"></i> Find Assessments
+                        </button>
+                    </div>
+                </form>
+
+                <div class="examples-container">
+                    <h3>Example queries:</h3>
+                    <div class="examples" id="example-queries">
+                        <div class="example-item" data-query="I am hiring for Java developers who can also collaborate effectively with my business teams. Looking for an assessment(s) that can be completed in 40 minutes.">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Java developers with collaboration skills (40 min)</p>
+                        </div>
+                        <div class="example-item" data-query="Looking to hire mid-level professionals who are proficient in Python, SQL and Java Script. Need an assessment package that can test all skills with max duration of 60 minutes.">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Mid-level Python, SQL, JavaScript (60 min)</p>
+                        </div>
+                        <div class="example-item" data-query="I am hiring for an analyst and wants applications to screen using Cognitive and personality tests, what options are available within 45 mins.">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Analyst position - Cognitive & personality (45 min)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section" id="results-section" style="display:none;">
+        <div class="container">
+            <div class="card">
+                <div class="results-header">
+                    <h2>Recommended Assessments</h2>
+                    <span id="results-count" class="results-count"></span>
+                </div>
+                <div id="loading-indicator" class="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>Finding the best assessments for you...</p>
+                </div>
+                <div id="results-container" class="results-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics-section">
+        <div class="container">
+            <div class="metrics-toggle">
+                <button id="toggle-metrics" class="toggle-btn">
+                    <i class="fas fa-chart-line"></i> View System Performance Metrics
+                </button>
+            </div>
+            <div id="metrics-card" class="card" style="display:none;">
+                <h2>System Performance</h2>
+                <div class="metrics-grid">
+                    <div class="metric-box recall">
+                        <h3>Mean Recall@3</h3>
+                        <div class="loading-ring" id="recall-loading"></div>
+                        <div id="recall-value" class="metric-value"></div>
+                        <p>Measures how many relevant assessments are retrieved in top recommendations</p>
+                    </div>
+                    <div class="metric-box map">
+                        <h3>MAP@3</h3>
+                        <div class="loading-ring" id="map-loading"></div>
+                        <div id="map-value" class="metric-value"></div>
+                        <p>Mean Average Precision evaluates both relevance and ranking order</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="api-section">
+        <div class="container">
+            <div class="card api-card">
+                <div class="api-info">
+                    <h2>API Access</h2>
+                    <p>Integrate our recommendation engine directly into your applications</p>
+                    <a href="/api/documentation" class="api-btn">
+                        <i class="fas fa-code"></i> View API Documentation
+                    </a>
+                </div>
+                <div class="api-example">
+                    <div class="code-header">
+                        <span>Example API Request</span>
+                        <button class="copy-btn" id="copy-api-example">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+<pre class="code-block" id="api-example-code">
+fetch('/api/recommendations', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    query: "Java developers with 40 min time limit"
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data));
+</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>SHL Assessment Recommendation System</h2>
+                    <p>Find the perfect assessment for your hiring needs</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/api/documentation">API Documentation</a></li>
+                        <li><a href="#" id="footer-metrics-link">System Metrics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@shl-recommendation.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 555-0123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SHL Assessment Recommendation System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Results template (hidden) -->
+    <template id="results-template">
+        <div class="results-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Assessment Name</th>
+                        <th>Test Type</th>
+                        <th>Duration</th>
+                        <th>Remote Testing</th>
+                        <th>Adaptive Support</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Results will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </template>
+
+    <!-- No results template (hidden) -->
+    <template id="no-results-template">
+        <div class="no-results">
+            <i class="fas fa-search"></i>
+            <h3>No matching assessments found</h3>
+            <p>Please try a different search query or refine your criteria.</p>
+        </div>
+    </template>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - SHL Assessment Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="api-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>API Documentation</h1>
+                <p>Integrate the SHL Assessment Recommendation System into your applications</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="api-docs-section">
+        <div class="container">
+            <div class="api-navigation">
+                <div class="card sidebar">
+                    <h3>Contents</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                        <li><a href="#recommendations-endpoint">Recommendations Endpoint</a></li>
+                        <li><a href="#evaluation-endpoint">Evaluation Endpoint</a></li>
+                        <li><a href="#code-examples">Code Examples</a></li>
+                    </ul>
+                    <div class="back-link">
+                        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main</a>
+                    </div>
+                </div>
+                
+                <div class="api-content">
+                    <div class="card" id="introduction">
+                        <h2>Introduction</h2>
+                        <p>The SHL Assessment Recommendation API allows you to programmatically access our recommendation engine to find the most suitable assessments based on your requirements. The API accepts natural language queries and returns relevant SHL assessments ranked by relevance.</p>
+                        
+                        <div class="info-box">
+                            <h4><i class="fas fa-info-circle"></i> Base URL</h4>
+                            <p>All API endpoints are relative to:</p>
+                            <code>{{ request.url_root }}</code>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="authentication">
+                        <h2>Authentication</h2>
+                        <p>Currently, the API is open for public use without authentication. In a production environment, we would implement API keys or OAuth authentication.</p>
+                    </div>
+                    
+                    <div class="card" id="recommendations-endpoint">
+                        <h2>Recommendations Endpoint</h2>
+                        <div class="endpoint-info">
+                            <span class="method">POST</span>
+                            <span class="path">/api/recommendations</span>
+                        </div>
+                        
+                        <h3>Request Parameters</h3>
+                        <div class="table-container">
+                            <table class="api-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Type</th>
+                                        <th>Required</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>query</td>
+                                        <td>string</td>
+                                        <td>Yes</td>
+                                        <td>Natural language query or job description</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h3>Response Format</h3>
+                        <div class="code-header">
+                            <span>JSON Response</span>
+                            <button class="copy-btn" data-code="recommendations-response">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+<pre class="code-block" id="recommendations-response">
+{
+  "status": "success",
+  "query": "Java developers with 40 min time limit",
+  "recommendations": [
+    {
+      "name": "Core Java (Entry Level) (New)",
+      "url": "https://www.shl.com/solutions/products/product-catalog/view/core-java-entry-level-new/",
+      "remoteTestingSupport": true,
+      "adaptiveSupport": true,
+      "duration": "35 minutes",
+      "testType": "Programming"
+    },
+    // Additional recommendations...
+  ]
+}
+</pre>
+                    </div>
+                    
+                    <div class="card" id="evaluation-endpoint">
+                        <h2>Evaluation Endpoint</h2>
+                        <div class="endpoint-info">
+                            <span class="method">GET</span>
+                            <span class="path">/api/evaluation</span>
+                        </div>
+                        
+                        <h3>Request Parameters</h3>
+                        <div class="table-container">
+                            <table class="api-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Type</th>
+                                        <th>Required</th>
+                                        <th>Default</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>k</td>
+                                        <td>integer</td>
+                                        <td>No</td>
+                                        <td>3</td>
+                                        <td>Number of top results to consider in metrics</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h3>Response Format</h3>
+                        <div class="code-header">
+                            <span>JSON Response</span>
+                            <button class="copy-btn" data-code="evaluation-response">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+<pre class="code-block" id="evaluation-response">
+{
+  "status": "success",
+  "metrics": {
+    "meanRecallAtK": 0.8533,
+    "mapAtK": 0.7925,
+    "k": 3
+  }
+}
+</pre>
+                    </div>
+                    
+                    <div class="card" id="code-examples">
+                        <h2>Code Examples</h2>
+                        
+                        <h3>JavaScript / Fetch API</h3>
+                        <div class="code-header">
+                            <span>Get Recommendations</span>
+                            <button class="copy-btn" data-code="js-recommendations">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+<pre class="code-block" id="js-recommendations">
+fetch('{{ request.url_root }}api/recommendations', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    query: "Java developers with 40 min time limit"
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+</pre>
+                        
+                        <h3>Python / Requests</h3>
+                        <div class="code-header">
+                            <span>Get Recommendations</span>
+                            <button class="copy-btn" data-code="python-recommendations">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+<pre class="code-block" id="python-recommendations">
+import requests
+import json
+
+url = "{{ request.url_root }}api/recommendations"
+payload = {
+    "query": "Java developers with 40 min time limit"
+}
+headers = {
+    "Content-Type": "application/json"
+}
+
+response = requests.post(url, data=json.dumps(payload), headers=headers)
+print(response.json())
+</pre>
+
+                        <h3>cURL</h3>
+                        <div class="code-header">
+                            <span>Get Recommendations</span>
+                            <button class="copy-btn" data-code="curl-recommendations">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+<pre class="code-block" id="curl-recommendations">
+curl -X POST "{{ request.url_root }}api/recommendations" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "Java developers with 40 min time limit"}'
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>SHL Assessment Recommendation System</h2>
+                    <p>Find the perfect assessment for your hiring needs</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/api/documentation">API Documentation</a></li>
+                        <li><a href="#" id="footer-metrics-link">System Metrics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@shl-recommendation.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 555-0123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SHL Assessment Recommendation System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/api-docs.js') }}"></script>
+</body>
+</html>
